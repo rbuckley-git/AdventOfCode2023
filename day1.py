@@ -12,7 +12,7 @@ def part1( line1 ):
     first_digit = None
     last_digit = None
     for ch in line1:
-        if ch in "0123456789":
+        if ch.isdigit():
             if first_digit == None:
                 first_digit = ch
             else:
@@ -30,7 +30,7 @@ def part2( line1 ):
     # scan for digit or number as word from the start
     i = 0
     while not first_number and i < len(line1):
-        if line1[i] in "0123456789":
+        if line1[i].isdigit():
             first_number = line1[i]
         else:
             for n in range(len(numbers)):
@@ -42,7 +42,7 @@ def part2( line1 ):
     # scan for digit or number as word from the end back
     i = len(line1)-1
     while not last_number and i >= 0:
-        if line1[i] in "0123456789":
+        if line1[i].isdigit():
             last_number = line1[i]
         else:
             for n in range(len(numbers)):
@@ -60,4 +60,5 @@ if __name__ == '__main__':
         for line in fp:
             s1 += part1(line[:-1])
             s2 += part2(line[:-1])
-        print(s1,s2)
+        print(s1)
+        print(s2)
