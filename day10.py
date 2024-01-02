@@ -68,7 +68,7 @@ if __name__ == '__main__':
     sys.setrecursionlimit(10**6)
 
     rows = []
-    with open( '10.input.txt' ) as fp:
+    with open( '10.test3.input.txt' ) as fp:
         for line in fp:
             line = line[:-1]
             rows.append( [ch for ch in line] )
@@ -79,12 +79,39 @@ if __name__ == '__main__':
     start = find_start(rows)
 
     print("Part 1",int(move(start)/2))
+#  S-------7I
+#  |F-----7|I
+#  ||     || 
+#  ||     || 
+#  |L-7 F-J| 
+#  |II| |II| 
+#  L--J L--J 
 
+# F7FSF7F7F7F7F7F---7
+#  |LJ||||||||||||F--J
+#  L-7LJLJ||||||LJL-7 
+# F--JF--7||LJLJ F7FJ 
+# L---JF-JLJ    FJLJ  
+#    F-JF---7   L7    
+#   FJF7L7F-JF7IIL---7
+#   L-JL7||F7|L7F-7F7|
+#      FJ|||||FJL7||LJ
+#      L-JLJLJL--JLJI 
+
+    cells_inside = 0
     for r in range(row_count):
         line = ""
+        inside = False
         for c in range(col_count):
             if (r,c) in grid:
                 line += grid[(r,c)]
+                inside = not inside
             else:
-                line += " "
+                if inside and c != col_count-1:
+                    cells_inside += 1
+                    line += "I"
+                else:
+                    line += " "
+
         print(line)
+    print("Part 2",cells_inside)
