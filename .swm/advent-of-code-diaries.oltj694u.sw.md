@@ -1,6 +1,8 @@
 ---
 title: Advent of Code diaries
 ---
+These are a summary of my notes from 2023 AoC challenge. Nice to get some quick wins in. Eventually ran out of time and energy for the late nights these challenges involve for me. I might try to catch up with a few puzzles&nbsp;
+
 ## Day 1
 
 Tricky part 2. Needed to scan for numbers in words from the end of the string toward the start as the search and replace approach did not work.
@@ -102,5 +104,35 @@ def part2( lines ):
 ---
 
 </SwmSnippet>
+
+## Day 5
+
+Part 1 was nice. Part 2 was something to do with optimising the ranges but too tired to work it out.
+
+## Day 6
+
+Nice and simple today given the nightmare of last night! No need for a parser as the data was simple. There is probably a nice optimisation to run it quicker but bute force was quick enough to get the answer. Perfection being the enemy of done, I left it with the gold star achieved.
+
+## Day 7
+
+Part 1 was ok but felt like I was knife and forking it. Part 2 was a bugger and I am not happy with my solution. Too much copy and paste and only deals with up to 5 Js rather than the generic case of N Js. Need sleep.&nbsp;
+
+One thing I did was to keep the bid value close to the answer so the final calculation was easy.
+
+## Day 8
+
+I remembered the LCM trick from 2019 so reused that and amazingly got the right answer - boom!
+
+## Day 9
+
+I had a silly bug in my first implementation. I was incorrectly finding the all zeros state by summing elements and checking for zero. Of course this does not work in all cases as a -5 and a +5 would give a zero too. Changed to check each cell is a value of zero and the answer popped out.
+
+## Day 10
+
+Nice pretty pipe maze printed out. No idea how to solve part 2. Need sleep.
+
+## Day 15
+
+Only part 1 working. Gave up on the challenge after this as I had other commitments to deal with.
 
 <SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBQWR2ZW50T2ZDb2RlMjAyMyUzQSUzQXJidWNrbGV5LWdpdA==" repo-name="AdventOfCode2023"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>
